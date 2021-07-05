@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="evidenceportal",
+    name="tasks",
     version="0.1.0",
     author="hiroyuki-kuromiya",
     author_email="khiroyuki1993@gmail.com",
