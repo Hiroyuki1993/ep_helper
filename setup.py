@@ -18,8 +18,5 @@ setuptools.setup(
         "License :: OSI Approved :: Apache 2.0 License",
         "Operating System :: OS Independent",
     ],
-    entry_points = {
-        'console_scripts': ['sample_command = sample_command.sample_command:main']
-    },
     python_requires='>=3.7',
 )
