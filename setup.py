@@ -12,11 +12,6 @@ setuptools.setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/Hiroyuki1993/ep_helper",
-    packages=setuptools.find_packages(),
-    classifiers=[
-        "Programming Language :: Python :: 3",
-        "License :: OSI Approved :: Apache 2.0 License",
-        "Operating System :: OS Independent",
-    ],
-    python_requires='>=3.7',
+    packages=find_packages(where='src'),
+    package_dir={'': 'src'},
 )
