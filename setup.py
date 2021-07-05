@@ -11,7 +11,7 @@ setuptools.setup(
     description="Support Your Post to Evidence Portal",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/Hiroyuki1993/ep-helper",
+    url="https://github.com/Hiroyuki1993/ep_helper",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
