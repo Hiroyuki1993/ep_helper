@@ -12,7 +12,7 @@ class API:
     def prepost(self, df):
         endpoint = self.url + "/prepost"
         payload = df[["pre", "post"]].to_json(orient="records")
-        response = requests.request("POST", url, headers=self.headers, data=payload)
+        response = requests.request("POST", endpoint, headers=self.headers, data=payload)
         return response.text
 
     def anova(self, df):
