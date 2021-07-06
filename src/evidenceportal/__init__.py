@@ -1,8 +1,5 @@
 from .sample import (
-    hello,
-    get_array,
-    get_df,
-    get_date,
+    API,
 )
 
 __version__ = '0.1.0'
