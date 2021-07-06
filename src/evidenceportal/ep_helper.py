@@ -27,4 +27,8 @@ class API:
 
     def clustering(self, df):
         endpoint = self.url + "/clustering"
-        return "success"
+        payload = json.dumps({
+            "data": df[["X", "y"]].to_dict(orient="records")
+        })
+        response = requests.request("POST", endpoint, headers=self.headers, data=payload)
+        return response.text
