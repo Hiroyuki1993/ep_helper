@@ -19,7 +19,11 @@ class API:
 
     def anova(self, df):
         endpoint = self.url + "/group"
-        return "success"
+        payload = json.dumps({
+            "data": df[["group", "y"]].to_dict(orient="records")
+        })
+        response = requests.request("POST", endpoint, headers=self.headers, data=payload)
+        return response.text
 
     def clustering(self, df):
         endpoint = self.url + "/clustering"
