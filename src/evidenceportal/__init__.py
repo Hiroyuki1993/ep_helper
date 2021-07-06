@@ -1,4 +1,4 @@
-from .sample import (
+from .ep_helper import (
     API,
 )
 
