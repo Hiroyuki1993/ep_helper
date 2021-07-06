@@ -12,7 +12,7 @@ class API:
     def prepost(self, df):
         endpoint = self.url + "/prepost"
         payload = json.dumps({
-            "data": df[["pre", "post"]].to_json(orient="records")
+            "data": df[["pre", "post"]].to_dict(orient="records")
         })
         response = requests.request("POST", endpoint, headers=self.headers, data=payload)
         return response.text
