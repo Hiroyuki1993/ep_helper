@@ -4,12 +4,16 @@ import json
 
 class API:
     url = ""
+    headers = {'Content-Type': 'application/json'}
+
     def __init__(self, url):
         self.url = url
 
     def prepost(self, df):
         endpoint = self.url + "/prepost"
-        return "success"
+        payload = df[["pre", "post"]].to_json(orient="records")
+        response = requests.request("POST", url, headers=self.headers, data=payload)
+        return response.text
 
     def anova(self, df):
         endpoint = self.url + "/group"
