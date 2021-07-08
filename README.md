@@ -24,7 +24,7 @@ For pre/post comparison of bunch of students.
 ```
 import pandas as pd
 
-df = pd.DataFrame({"pre": [], "post": []})
+df = pd.DataFrame({"student_id":[1,2,3,4,5], "pre": [1.2, 3.2, 4.1, 2.3, 1.4], "post": [2.2, 4.4, 2.3, 5.5, 3.9]})
 ep.prepost(df)
 ```
 
