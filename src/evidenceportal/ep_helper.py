@@ -25,10 +25,11 @@ class API:
         response = requests.request("POST", endpoint, headers=self.headers, data=payload)
         return response.text
 
-    def clustering(self, df):
+    def clustering(self, df, k):
         endpoint = self.url + "/clustering"
         payload = json.dumps({
-            "data": df[["X", "y"]].to_dict(orient="records")
+            "data": df[["X", "y"]].to_dict(orient="records"),
+            "cluster_number": k
         })
         response = requests.request("POST", endpoint, headers=self.headers, data=payload)
         return response.text
