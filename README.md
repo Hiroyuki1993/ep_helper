@@ -34,17 +34,6 @@ For group based comparison design (e.g. control group v.s. experiment group).
 ```
 import pandas as pd
 
-df = pd.DataFrame({"student_id": [1,2,3,4,5], "group": ["A", "B", "A", "B", "A"], "y": []})
+df = pd.DataFrame({"student_id": [1,2,3,4,5], "group": ["A", "B", "A", "B", "A"], "y": [2.2, 1.1, 3.3, 4.4, 5.5]})
 ep.anova(df)
-```
-
-## Group Comparison (+Clustering)
-It provides automatic K-means clustering, then compared the groups by ANOVA.
-
-
-```
-import pandas as pd
-
-df = pd.DataFrame({"student_id": [1,2,3,4,5], "X": [[1,2],[1,3],[1,6],[3,3],[9.9]], "y": []})
-ep.clustering(df, k=3) # k = cluster number
 ```
