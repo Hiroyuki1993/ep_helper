@@ -12,7 +12,7 @@ class API:
     def prepost(self, df, col_pre, col_post):
         endpoint = self.url + "/prepost"
         payload = json.dumps({
-            "data": df[["pre", "post"]].to_dict(orient="records"),
+            "data": df.to_dict(orient="records"),
             "col_pre": col_pre,
             "col_post": col_post
         })
@@ -22,7 +22,7 @@ class API:
     def anova(self, df, col_group, col_y):
         endpoint = self.url + "/group"
         payload = json.dumps({
-            "data": df[["group", "y"]].to_dict(orient="records"),
+            "data": df.to_dict(orient="records"),
             "col_group": col_group,
             "col_y": col_y
         })
